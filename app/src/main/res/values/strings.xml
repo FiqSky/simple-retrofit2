@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleRetrofit</string>
+    <string name="fab">fab</string>
+</resources>
