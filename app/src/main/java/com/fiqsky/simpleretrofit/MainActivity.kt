@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity() {
                             .into(iv_image)
                     iv_image.visibility = View.VISIBLE
                 }
-
             } catch (e: Exception) {
                 Log.e("Main", "Error: ${e.message}")
             }
