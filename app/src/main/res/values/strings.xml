@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SimpleRetrofit</string>
     <string name="fab">fab</string>
+    <string name="img">img</string>
 </resources>

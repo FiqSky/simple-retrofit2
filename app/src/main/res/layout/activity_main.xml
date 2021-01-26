@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/animation"
     tools:context=".MainActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -27,16 +29,17 @@
         app:lazyloader_dotsDist="20dp"
         app:lazyloader_dotsRadius="10dp"
         app:lazyloader_firstDelayDur="150"
-        app:lazyloader_firstDotColor="#4285F4"
+        app:lazyloader_firstDotColor="#FBBC04"
         app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
         app:lazyloader_secondDelayDur="300"
-        app:lazyloader_secondDotColor="#EA4335"
+        app:lazyloader_secondDotColor="#FBBC04"
         app:lazyloader_thirdDotColor="#FBBC04" />
 
     <ImageView
         android:id="@+id/iv_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/img" />
 
 </RelativeLayout>

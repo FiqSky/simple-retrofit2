@@ -1,5 +1,6 @@
 package com.fiqsky.simpleretrofit
 
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         makeApiRequest()
+        backgroundAnimation()
 
         btn_fab.setOnClickListener {
             btn_fab.animate().apply {
@@ -27,6 +29,15 @@ class MainActivity : AppCompatActivity() {
             }.start()
             makeApiRequest()
             iv_image.visibility = View.GONE
+        }
+    }
+
+    private fun backgroundAnimation() {
+        val animationDrawable: AnimationDrawable = rl_view.background as AnimationDrawable
+        animationDrawable.apply {
+            setEnterFadeDuration(1000)
+            setExitFadeDuration(3000)
+            start()
         }
     }
 
