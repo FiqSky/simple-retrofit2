@@ -43,10 +43,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun makeApiRequest() {
         val api = Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(ApiRequest::class.java)
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ApiRequest::class.java)
 
         GlobalScope.launch(Dispatchers.IO) {
             try {
@@ -55,8 +55,8 @@ class MainActivity : AppCompatActivity() {
 
                 withContext(Dispatchers.Main) {
                     Glide.with(applicationContext)
-                        .load(response.img)
-                        .into(iv_image)
+                            .load(response.img)
+                            .into(iv_image)
                     iv_image.visibility = View.VISIBLE
                 }
 
